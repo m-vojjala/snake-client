@@ -9,8 +9,13 @@ const connect = function() {
     port: 50541
   });
   // interpret incoming data as text
+  conn.on('connect',() => console.log("Successfully connected to game server" ));
   conn.setEncoding('utf8');
-  conn.on('data', data => console.log(data));
+  conn.on('connect',() => console.log("Set Encoding \n" ));
+  conn.on('connect', () => {conn.write('Name: AAA');});
+
+  //conn.on('connect' ,()=> conn.write("Name:MON")); 
+  conn.on('data', data => console.log("Message from server: ", data));
  
 
   return conn;
