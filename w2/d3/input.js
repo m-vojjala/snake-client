@@ -21,13 +21,17 @@ if(key === '\u0003'){
 connection.write("Move: up")
 }
 else if(key === 'a'){
-  connection.write("Move: left")
+connection.write("Move: left")
 }
-  else if(key === 's'){
-    connection.write("Move: down")
+else if(key === 's'){
+connection.write("Move: down")
   }
-    else if(key === 'd'){
-      connection.write("Move: right")
+else if(key === 'd'){
+ connection.write("Move: right")
+}else if(key === 'm'){
+  connection.write("Say: HI")
+}else if(key === 'u'){
+  connection.write("Say: HRU")
 }
   }
 
